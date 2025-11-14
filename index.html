@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Muhd Khalish Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body> 
     <header>
         <h1>Muhammad Khalish Reeza</h1>
-        <img src="assets/images/profileimagestudy.jpg"alt="Profile Image" class="profile-pic">
+        <a href="assets/resume (UNFINISHED).pdf" download class="btn btn--download">Download<span> CV</span></a>
     </header>
 
 
@@ -18,32 +18,151 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <nav>
-          <a href="#"><ion-icon name="person"></ion-icon><span>About Me</span></a>
-          <a href="#"><ion-icon name="folder-open"></ion-icon><span>Projects</span></a>
-          <a href="#"><ion-icon name="image"></ion-icon><span>Images</span></a>
-          <a href="#"><ion-icon name="information-circle"></ion-icon><span>Contact Info</span></a>
+          <a href="#About Me"><ion-icon name="person"></ion-icon><span>About Me</span></a>
+          <a href="#Projects"><ion-icon name="folder-open"></ion-icon><span>Projects</span></a>
+          <a href="#Images"><ion-icon name="image"></ion-icon><span>Images</span></a>
+          <a href="#Contacts"><ion-icon name="information-circle"></ion-icon><span>Contact Info</span></a>
+          <a href="#Links"><ion-icon name="link-outline"></ion-icon><span>Links</span></a>
       </nav>
     </aside>
 
-    <div class="main-container">
-    <main class="container">
-        <section>
+    <div  class="main-container">
+    <main class="content-container">
+        <section id="About Me">
+            <img src="assets/images/profileimagestudy.jpg" alt="Profile Image" class="profile-pic">
             <h2>About Me!</h2>
-            <p>Kuchingite! Born and bred! Love Playing Music, Games and More!</p>
+
+            <!-- paragraph / bio -->
+            <p class="bio">
+                I’m Muhammad — a Kuchingite who loves music, games and building interactive things on the web.
+                I enjoy learning new technologies, creating small apps and collaborating on projects.
+            </p>
+
+            <!-- skills section -->
+            <section class="skills-section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Skills</h>
+                <div class="skills" role="list">
+                    <span class="skill" role="listitem">HTML</span>
+                    <span class="skill" role="listitem">CSS</span>
+                    <span class="skill" role="listitem">JavaScript</span>
+                    <span class="skill" role="listitem">PHP</span>
+                    <span class="skill" role="listitem">Python</span>
+                    <span class="skill" role="listitem">MySQL</span>
+                    <span class="skill" role="listitem">Java</span>
+                    <span class="skill" role="listitem">C++</span>
+                </div>
+            </section>
         </section>
+
+        <section id="Projects" class="projects">
+        <h2>Acedemic Projects</h2>
+
+        <div class="projects-scroll">
+            
+            <div class="project-card">
+            <img src="project1.png" class="project-img">
+            <div class="project-content">
+                <div class="project-header">
+                <h3>Insurance Management System</h3>
+                <a href="#" class="project-link" target="_blank">↗</a>
+                </div>
+
+                <div class="tags">
+                <span class="tag js">Python</span>
+                <span class="tag js">SQLite</span>
+                </div>
+
+                <p class="project-desc">
+                 A console-based python program insurance management system
+                </p>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <img src="project1.png" class="project-img">
+            <div class="project-content">
+                <div class="project-header">
+                <h3>Mental Health Awareness App</h3>
+                <a href="#" class="project-link" target="_blank">↗</a>
+                </div>
+
+                <div class="tags">
+                <span class="tag js">Java</span>
+
+                </div>
+
+                <p class="project-desc">
+                A website that provides roadmap for various fields in programming and helps people learn to code for free.
+                </p>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <img src="project1.png" class="project-img">
+            <div class="project-content">
+                <div class="project-header">
+                <h3>Sustainabite Prototype</h3>
+                <a href="#" class="project-link" target="_blank">↗</a>
+                </div>
+
+                <div class="tags">
+                <span class="tag js">Figma</span>
+                </div>
+
+                <p class="project-desc">
+                A healthcare application prototype collaboratively designed using Figma.
+                </p>
+            </div>
+            </div>
+
+            <div class="project-card">
+            <img src="project1.png" class="project-img">
+            <div class="project-content">
+                <div class="project-header">
+                <h3>Online Lost and Found System(Software Requirement Specification Study)</h3>
+                <a href="#" class="project-link" target="_blank">↗</a>
+                </div>
+
+                <div class="tags">
+                <span class="tag js">Document</span>
+                </div>
+
+                <p class="project-desc">
+                SRS report on an Online Lost and Found System.
+                </p>
+            </div>
+            </div>
+            
+        </div>
+        </section>
+
+
+
+        <section id="Images">
+            <h2>Images</h2>
+            <img src="assets/images/bandimage.jpg" alt="Sample Image 1" class="sample-image">
+            <img src="assets/images/bandimagesolo.jpg" alt="Sample Image 2" class="sample-image">
+        </section>  
+        
+        <section id="Contacts">
+            <h2>Contact Info</h2>
+            <p>Email:</p>
+            </section>
+
+        <section id="Links">
+            <h2>Links</h2>
+            <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-github"></ion-icon></a>
+                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="mail"></ion-icon></a>
+            </section>
         
         
     </main>
     
     <footer>
             <div class="footer-container">
-                <div class="link-icons">
-                    <a class="linkedin" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-linkedin"></ion-icon></a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-github"></ion-icon></a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-youtube"></ion-icon></a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a class="linkedin" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="mail"></ion-icon></a>
-                </div>
                 <div class="footer-bottom">
                     <p>© 2024 Muhammad Khalish Reeza. All rights reserved.</p>
                 </div>
