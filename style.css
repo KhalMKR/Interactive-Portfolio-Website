@@ -1,0 +1,181 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+    background-color: #202020;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    outline: silver solid 1px;  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #202020;
+}
+
+p{
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Layout Container */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    font-family: 'Courier New', Courier, monospace;
+    top: 50%;
+    position: absolute;
+    color: white;
+    transform: translateY(-50%);
+}
+
+.sidebar a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* icon block */
+.sidebar a ion-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    padding: 0; /* remove extra padding so height is consistent */
+    margin: 5px;
+    position: relative;
+}
+
+/* label: hidden by default (slide + fade) */
+.sidebar a span{
+    width:150px;
+    height: auto;            /* allow flex centering */
+    line-height: 1;
+    letter-spacing: 1.5px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.2,.8,.2,1);
+    opacity: 0;
+    transform: translateX(-12px);
+    pointer-events: none; /* prevent tabbing when hidden */
+    margin-left: 8px;
+    align-self: center;    /* vertically center the span inside the flex link */
+    
+}
+
+/* reveal label when hovering the icon (or the whole link) */
+.sidebar a ion-icon:hover + span,
+.sidebar a:hover span {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* also show on focus for accessibility */
+.sidebar a ion-icon:focus + span,
+.sidebar a:focus-within span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sidebar a ion-icon:hover a span{
+    margin-left: 0;
+}
+
+
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+footer{
+    background-color: #202020;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.link-icons{
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.link-icons a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.link-icons ion-icon{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-bottom{
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-bottom p{
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.main-container{
+    display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
