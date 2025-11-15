@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhd Khalish Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="script.js" defer></script>
 </head>
 <body> 
@@ -29,42 +30,43 @@
     <div  class="main-container">
     <main class="content-container">
         <section id="About Me">
-            <img src="assets/images/profileimagestudy.jpg" alt="Profile Image" class="profile-pic">
             <h2>About Me!</h2>
-
+           <div class="bio-wrapper">
+            
             <!-- paragraph / bio -->
             <p class="bio">
-                I’m Muhammad — a Kuchingite who loves music, games and building interactive things on the web.
+                My name is Muhammad Khalish Reeza, people call me Khalish. I am a Kuchingite who loves music, games and building interactive things on the web.
                 I enjoy learning new technologies, creating small apps and collaborating on projects.
             </p>
 
+             <img src="assets/images/profileimagestudy.jpg" alt="Profile Image" class="profile-pic">
+            </div>
             <!-- skills section -->
-            <section class="skills-section" aria-labelledby="skills-heading">
+            <div class="skills-section" aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Skills</h>
                 <div class="skills" role="list">
-                    <span class="skill" role="listitem">HTML</span>
-                    <span class="skill" role="listitem">CSS</span>
-                    <span class="skill" role="listitem">JavaScript</span>
-                    <span class="skill" role="listitem">PHP</span>
-                    <span class="skill" role="listitem">Python</span>
-                    <span class="skill" role="listitem">MySQL</span>
-                    <span class="skill" role="listitem">Java</span>
-                    <span class="skill" role="listitem">C++</span>
+                    <span class="skill" role="listitem"><i class="devicon-html5-plain"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-css3-plain"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-javascript-plain"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-php-plain"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-python-plain-wordmark"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-mysql-plain-wordmark"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-java-plain-wordmark"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-cplusplus-plain"></i></span>
                 </div>
-            </section>
+            </div>
         </section>
 
         <section id="Projects" class="projects">
-        <h2>Acedemic Projects</h2>
+        <h2>Academic Projects</h2>
 
         <div class="projects-scroll">
             
             <div class="project-card">
-            <img src="project1.png" class="project-img">
+            <img src="assets/images/pythonplaceholder.jpg">
             <div class="project-content">
                 <div class="project-header">
                 <h3>Insurance Management System</h3>
-                <a href="#" class="project-link" target="_blank">↗</a>
                 </div>
 
                 <div class="tags">
@@ -79,11 +81,10 @@
             </div>
 
             <div class="project-card">
-            <img src="project1.png" class="project-img">
+            <img src="assets/images/mentalhealthapp.jpg">
             <div class="project-content">
                 <div class="project-header">
                 <h3>Mental Health Awareness App</h3>
-                <a href="#" class="project-link" target="_blank">↗</a>
                 </div>
 
                 <div class="tags">
@@ -98,11 +99,10 @@
             </div>
 
             <div class="project-card">
-            <img src="project1.png" class="project-img">
+            <img src="assets/images/sustainabite.jpg">
             <div class="project-content">
                 <div class="project-header">
                 <h3>Sustainabite Prototype</h3>
-                <a href="#" class="project-link" target="_blank">↗</a>
                 </div>
 
                 <div class="tags">
@@ -116,11 +116,10 @@
             </div>
 
             <div class="project-card">
-            <img src="project1.png" class="project-img">
+            <img src="assets/images/olfssrs.jpg">
             <div class="project-content">
                 <div class="project-header">
                 <h3>Online Lost and Found System(Software Requirement Specification Study)</h3>
-                <a href="#" class="project-link" target="_blank">↗</a>
                 </div>
 
                 <div class="tags">
@@ -144,35 +143,30 @@
             <img src="assets/images/bandimagesolo.jpg" alt="Sample Image 2" class="sample-image">
         </section>  
         
-        <section id="Contacts">
-            <h2>Contact Info</h2>
-            <p>Email:</p>
-            </section>
+        <section id="Contacts" class="contact-info">
+            <h2>Get In Contact!</h2>
+            <button href="#" id="copyEmail">muhdkhalishreeza@gmail.com</button>
+            <button href="#" id="copyNo">+60 11-2918 0129</button>
+            <button href="#" id="copyStudentEmail">97594@siswa.unimas.my</button>
+        </section>
 
         <section id="Links">
             <h2>Links</h2>
-            <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-linkedin"></ion-icon></a>
-                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-github"></ion-icon></a>
-                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-youtube"></ion-icon></a>
-                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="mail"></ion-icon></a>
+            <div class="links-container">
+                    <div class="link-card"><a class="link" href="https://www.linkedin.com/in/muhammad-khalish-reeza-bin-dzulkhalif-0154422a4"><ion-icon name="logo-linkedin"></ion-icon></a></div>
+                    <div class="link-card"><a class="link" href="https://github.com/KhalMKR"><ion-icon name="logo-github"></ion-icon></a></div>
+                    <div class="link-card"><a class="link" href="https://www.youtube.com/@akusemkhal"><ion-icon name="logo-youtube"></ion-icon></a></div>
+                    <div class="link-card"><a class="link" href="https://www.instagram.com/khal.ikong?igsh=MTZpZXgyaDM3aWwzNQ%3D%3D&utm_source=qr"><ion-icon name="logo-instagram"></ion-icon></a></div>
+            </div>
             </section>
         
-        
+    
     </main>
     
-    <footer>
-            <div class="footer-container">
-                <div class="footer-bottom">
-                    <p>© 2024 Muhammad Khalish Reeza. All rights reserved.</p>
-                </div>
-            </div>
-        
-        
-        </footer>
     </div>
     </div>
-    <script src="index.js"></script>    
+    <script src="index.js"></script>
+    <script src="copy-buttons.js" defer></script>    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
