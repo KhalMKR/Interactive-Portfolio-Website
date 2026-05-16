@@ -8,8 +8,14 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="script.js" defer></script>
 </head>
+
 <body> 
     <header>
+        <button class="nav-toggle" id="toggle-btn" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <h1>Muhammad Khalish Reeza</h1>
         <a href="assets/MUHAMMAD_KHALISH_RESUME.pdf" download class="btn btn--download">Download<span> CV</span></a>
     </header>
@@ -30,29 +36,33 @@
     <div  class="main-container">
     <main class="content-container">
         <section id="About Me">
-            <h2>About Me!</h2>
-           <div class="bio-wrapper">
-            
-            <!-- paragraph / bio -->
-            <p class="bio">
-                My name is Muhammad Khalish Reeza, people call me Khalish. I am a Kuchingite who loves music, games and building interactive things on the web.
-                I enjoy learning new technologies, creating small apps and collaborating on projects.
-            </p>
-
-             <img src="assets/images/profileimagestudy.jpg" alt="Profile Image" class="profile-pic">
+            <div class="bio-section">
+                <div class="bio-wrapper">
+                    <div class="bio-content">
+                        <h2>About Me!</h2>
+                        <p>My name is Muhammad Khalish Reeza. I am a software engineering student with a passion for creating anything. I
+                            love music, games and animes. I am currently in my internship.
+                        </p>
+                    </div>
+                </div>
             </div>
+            
             <!-- skills section -->
             <div class="skills-section" aria-labelledby="skills-heading">
                 <h2 id="skills-heading">Skills</h>
                 <div class="skills" role="list">
-                    <span class="skill" role="listitem"><i class="devicon-html5-plain"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-css3-plain"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-javascript-plain"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-php-plain"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-python-plain-wordmark"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-mysql-plain-wordmark"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-java-plain-wordmark"></i></span>
-                    <span class="skill" role="listitem"><i class="devicon-cplusplus-plain"></i></span>
+                    <span class="skill" role="listitem"><i class="devicon-html5-plain"></i><p>HTML5</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-css3-plain"></i><p>CSS3</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-javascript-plain"></i><p>JavaScript</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-php-plain"></i><p>PHP</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-python-plain-wordmark"></i><p>Python</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-mysql-plain-wordmark"></i><p>MySQL</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-java-plain-wordmark"></i><p>Java</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-cplusplus-plain"></i><p>C++</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-react-plain"></i><p>React</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-express-original"></i><p>Express</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-mongodb-plain"></i><p>MongoDB</p></span>
+                    <span class="skill" role="listitem"><i class="devicon-nodejs-plain"></i><p>Node.js</p></span>
                 </div>
             </div>
         </section>
@@ -141,12 +151,16 @@
             <h2>Images</h2>
             <img src="assets/images/bandimage.jpg" alt="Sample Image 1" class="sample-image">
             <img src="assets/images/bandimagesolo.jpg" alt="Sample Image 2" class="sample-image">
+            <img src="assets/images/beachimg.jpeg" alt="Sample Image 2" class="sample-image">
+            <img src="assets/images/khalish-perform.jpg" alt="Sample Image 2" class="sample-image">
         </section>  
         
         <section id="Contacts" class="contact-info">
             <h2>Get In Contact!</h2>
+            <div class="contact-options">
             <button href="#" id="copyEmail">muhdkhalishreeza@gmail.com</button>
             <button href="#" id="copyNo">+60 11-2918 0129</button>
+            </div>
         </section>
 
         <section id="Links">
@@ -159,6 +173,7 @@
             </div>
             </section>
         
+    
     
     </main>
     

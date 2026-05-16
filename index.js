@@ -4,9 +4,36 @@ const sidebar = document.getElementById('sidebar');
 const slider = document.querySelector('.projects-scroll');
 
 // Add event listener for toggling
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('collapsed');
-});
+if (toggleBtn && sidebar) {
+  const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+  const syncMobileState = () => {
+    if (mobileBreakpoint.matches) {
+      sidebar.classList.add('collapsed');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    } else {
+      sidebar.classList.remove('collapsed');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  syncMobileState();
+  mobileBreakpoint.addEventListener('change', syncMobileState);
+
+  toggleBtn.addEventListener('click', () => {
+    const isCollapsed = sidebar.classList.toggle('collapsed');
+    toggleBtn.setAttribute('aria-expanded', String(!isCollapsed));
+  });
+
+  sidebar.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobileBreakpoint.matches) {
+        sidebar.classList.add('collapsed');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
 
 // Scroll-to-images button
 const gotoImagesBtn = document.getElementById('goto-images-btn');

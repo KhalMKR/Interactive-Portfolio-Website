@@ -10,6 +10,11 @@ html, body {
 }
 
 body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -23,20 +28,46 @@ header {
   font-family: 'Courier New', Courier, monospace;
   flex: 0 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   background-color: #202020;
   color: white;
-  padding: 10px;
+  padding: 12px 20px;
   text-align: center;
   font-size: 1.5rem;
   outline: silver solid 1px;
 }
 
 header h1{
-    position: relative;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: transparent;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
 }
 
 section {
@@ -49,6 +80,7 @@ section {
   display: flex;
   flex: 1 1 auto;    
   min-height: 0;     
+  width: 100%;
 }
 /* main content wrapper — allow vertical scrolling inside the main area */
 .content-container {
@@ -213,7 +245,8 @@ section {
     display: flex;
     gap: 15px;
     margin-top: 10px;
-    margin-bottom: 300px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
 
@@ -248,8 +281,8 @@ section {
 
 .link-card {
     margin-top: 20px;
-    height: 250px;
-    width: 200px;
+  height: 180px;
+  width: 180px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -272,24 +305,6 @@ section {
 :root{
   --sidebar-collapsed-width: 70px;   /* width when collapsed */
   --sidebar-expanded-width: 250px;   /* width when expanded (hover / open) */
-}
-
-/* ensure collapsed/expanded width vars exist (merge if already present) */
-:root{
-  --sidebar-collapsed-width: 70px;
-  --sidebar-expanded-width: 250px;
-}
-
-/* responsive: sidebar becomes normal flow on small screens */
-@media (max-width: 700px) {
-  .sidebar {
-    position: relative;
-    width: auto;
-    height: auto;
-  }
-  .main-container {
-    margin-left: 0;
-  }
 }
 
 .btn {
@@ -323,7 +338,9 @@ section {
 
 .sample-image{
     width: 200px;
-    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 80%;
     margin: 10px;
     border: white solid 2px;
     border-radius: 10px;
@@ -353,26 +370,37 @@ section {
 
 /* container for skill badges */
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(6, max-content); /* 4 columns, adjust as needed */
+  gap: 20px;
   align-items: center;
 }
 
 /* individual skill badge (rounded rectangle) */
 .skill {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   background: #ffffff;
   color: #202020;
   padding: 12px;
   margin: 10px;
   border-radius: 12px;
   font-weight: 600;
-  font-size: 100px;
+  font-size: 7rem;
   box-shadow: 0 1px 0 rgba(0,0,0,0.25);
   border: 1px solid rgba(0,0,0,0.08);
 }
 
+
+.skill p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
 /* alternative darker badge (optional) */
 .skill--muted {
   background: rgba(255,255,255,0.08);
@@ -411,6 +439,7 @@ section {
   max-width: 360px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   background: #2a2a2a;         /* adjust to match your design */
   border-radius: 8px;
   overflow: hidden;
@@ -418,8 +447,9 @@ section {
 }
 .project-card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  object-position: 60% center;
 }
 /* hide native scrollbar (optional) */
 .projects-scroll::-webkit-scrollbar {
@@ -432,11 +462,40 @@ section {
 
 /* make sure on large screens cards can layout normally if you prefer */
 
+.bio-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  min-height: 500px;
+    margin-bottom: 40px;
+}
+
+.bio-section::before {
+   background-image: url('assets/images/beachimg4.jpeg');
+    background-size: 100%;
+    background-position: center 80%;
+  min-height: 500px;
+    filter: brightness(0.4) hue-rotate(10deg) saturate(1.2);
+
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+   
+}
+
 .bio-wrapper{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin-left: 20px;
     gap: 470px;
+}
+
+.bio-content {
+    max-width: 500px;
+    font-weight: 400;
+    color: white;
+    padding: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -453,6 +512,8 @@ section {
 }
 
 .contact-info {
+
+  align-items: center;
   justify-content: center;
     font-size: 20px;
     margin-top: 20px;
@@ -505,4 +566,211 @@ section {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    padding-left: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-110%);
+    width: min(82vw, 320px);
+    height: 100vh;
+    max-height: none;
+    padding: 16px 14px;
+    background: rgba(32, 32, 32, 0.96);
+    backdrop-filter: blur(8px);
+    box-shadow: 12px 0 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .sidebar:hover,
+  .sidebar:not(.collapsed) {
+    width: min(82vw, 320px);
+  }
+
+  .sidebar:not(.collapsed) {
+    transform: translateX(0);
+  }
+
+  .sidebar nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex: 1;
+    padding-left: 0;
+  }
+
+  .sidebar a {
+    margin: 0;
+    padding: 12px 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+  }
+
+  .sidebar a ion-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .sidebar a span {
+    width: auto;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    margin-left: 6px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .btn--download {
+    margin-left: auto;
+  }
+
+  .bio-section,
+  .bio-section::before {
+    min-height: 420px;
+  }
+
+  .bio-wrapper {
+    margin-left: 0;
+    padding: 20px 16px;
+    gap: 0;
+  }
+
+  .bio-content {
+    max-width: 100%;
+  }
+
+  .projects-scroll {
+    padding-inline: 0;
+  }
+
+  .project-card {
+    flex-basis: min(85vw, 340px);
+  }
+
+  .sample-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: block;
+    margin: 12px auto;
+  }
+
+  .links-container {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .link-card {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 12px 14px;
+
+  }
+
+  header h1 {
+    flex: 1 1 80%;
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .btn--download {
+    position: static;
+    margin: 0;
+  }
+
+  .nav-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .content-container {
+    padding: 14px;
+    gap: 18px;
+  }
+
+  .content-container h2,
+  section h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .bio-section,
+  .bio-section::before {
+    min-height: 360px;
+  }
+
+  .bio-section::before {
+    background-size: cover;
+  }
+
+  .bio-content {
+    padding: 12px 14px;
+  }
+
+ 
+  .skills {
+    justify-content: center;
+    grid-template-columns: repeat(4, max-content);
+    gap: 12px;
+  }
+
+  .skill {
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 4rem;
+  }
+
+  .skill p {
+    font-size: 12px;
+  }
+
+  .project-card img {
+    height: 180px;
+    width: auto;
+  }
+  .project-card {
+    flex: 0 0 88vw;
+    min-width: 240px;
+    max-width: none;
+  }
+
+  .project-content {
+    padding: 14px;
+  }
+
+  .contact-info {
+    gap: 10px;
+  }
+
+  .contact-info button,
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .links-container {
+    gap: 12px;
+  }
+
+  .link-card {
+    width: calc(50% - 6px);
+    height: 120px;
+  }
 }
